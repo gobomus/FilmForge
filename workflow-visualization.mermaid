@@ -1,0 +1,42 @@
+flowchart TD
+    classDef userInteraction fill:#4338ca,color:#ffffff,stroke:#312e81
+    classDef aiProcess fill:#1d4ed8,color:#ffffff,stroke:#1e40af
+    classDef aiAnalysis fill:#0891b2,color:#ffffff,stroke:#0e7490
+    classDef visualization fill:#7c3aed,color:#ffffff,stroke:#6d28d9
+    classDef generation fill:#db2777,color:#ffffff,stroke:#be185d
+    classDef review fill:#65a30d,color:#ffffff,stroke:#4d7c0f
+    classDef output fill:#0d9488,color:#ffffff,stroke:#0f766e
+
+    %% User Input Stage
+    A[Filmmaker Inputs Concept] -->|Creative Brief| B(AI Analyzes Concept)
+    A -->|Style References| B
+    A -->|Genre Selection| B
+    A -->|Target Audience| B
+    
+    %% Concept Development
+    B -->|Expanded Ideas| C{Filmmaker Selects Direction}
+    C -->|Option A| D[Script Development]
+    C -->|Option B| D
+    C -->|Custom Direction| D
+    
+    %% Script Development
+    D --> E(AI Generates Draft Script)
+    E --> F{Filmmaker Reviews Script}
+    F -->|Requests Changes| G(AI Refines Specific Elements)
+    G --> F
+    F -->|Approves Script| H[Visual Development]
+    
+    %% Visual Development
+    H --> I(AI Analyzes Script for Visual Elements)
+    I --> J(AI Generates Style Options)
+    J --> K{Filmmaker Selects Visual Style}
+    K --> L(AI Creates Storyboard Sequence)
+    L --> M{Filmmaker Reviews Storyboard}
+    M -->|Requests Changes| N(AI Refines Specific Shots)
+    N --> M
+    M -->|Approves Storyboard| O[Cinematography Planning]
+    
+    %% Cinematography
+    O --> P(AI Generates Camera & Lighting Plans)
+    P --> Q{Filmmaker Reviews Technical Plans}
+    Q -->|Requests Changes
